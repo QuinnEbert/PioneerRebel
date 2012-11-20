@@ -84,4 +84,30 @@
 		$val = intval((((intval(substr($out,3)))-1)/2));
 		return $val;
 	}
+	// Request the current LCD reading (from a list of known values) that might
+	// be displayed on the 1022-K.  The list of known values was hand-compiled
+	// by running my unit through its full set of dialable inputs and noting
+	// the "FNxy" value that Telnet interface echoed back for the input change
+	// Returns the string value on OK or false (boolean) on error
+	function pvRebel_getSource($address) {
+		$inNames["FN17"] = "IPOD/USB";
+		$inNames["FN05"] = "TV";
+		$inNames["FN01"] = "CD";
+		$inNames["FN02"] = "TUNER";
+		$inNames["FN33"] = "ADAPTER";
+		$inNames["FN25"] = "BD";
+		$inNames["FN04"] = "DVD";
+		$inNames["FN06"] = "SAT/CBL";
+		$inNames["FN15"] = "DVR/BDR";
+		$inNames["FN10"] = "VIDEO";
+		$inNames["FN49"] = "GAME";
+		$inNames["FN38"] = "NETRADIO";
+		$inNames["FN41"] = "PANDORA";
+		$inNames["FN44"] = "M.SERVER";
+		$inNames["FN45"] = "FAVORITE";
+		$out = pvRebel_SEND_CMD($address,'?FN');
+		if (! $out) return false;
+		$val = trim($out);
+		return $inNames[$val];
+	}
 ?>

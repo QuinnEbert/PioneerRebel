@@ -21,6 +21,7 @@
 	//$olA = pvRebel_getVolVal('192.168.1.Xyz');
 	//$olB = pvRebel_getVolPct('192.168.1.Xyz');
 	//$olC = pvRebel_getMuting('192.168.1.Xyz');
+	//$olD = pvRebel_getSource('192.168.1.Xyz');
 	//echo("VAL: $olA\nPCT: $olB\n");
 	/*if ($olC!==false) {
 		// Just remember, 1022-K uses '0' for muted and '1' for un-muted,
@@ -31,4 +32,5 @@
 			echo("The receiver *is* muting!\n");
 		}
 	}*/
+	//echo("$olD\n");
 ?>
