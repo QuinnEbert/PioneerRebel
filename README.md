@@ -6,13 +6,16 @@ Homebrew control tools for the Pioneer VSX-1022-K (and possibly others) Home The
 What's Currently Supported
 ==========================
 
-* Doesn't really do too much yet.  Still working on getting this thing "fleshed out" so that I can use it for something interesting.
+* **NEW!**  Features a PHP-based interface optimized for using the Wii-U tablet controller's NetFront-based web browser for switching between my favorite inputs and powering on/off the receiver unit.  ***Note:*** *you must be able to host this on a PHP-equipped web server (probably on your home network) for it to be usable.*
+* Doesn't really do much else yet.  Still working on more features/ideas!
 
 What's Currently Planned
 ========================
 
-* Originally, I just wanted to see if I could manage to make something that I could use in a "home automation" sense, for lack of a better term, specifically, to mute/unmute my receiver when certain things were going on with my computer (a mid 2011 iMac by chance).
-* Now, I'm considering making some sort of interface for this, probably at least a web UI.  Also have some interesting "fleeting thoughts" of things I could do with mobile apps for this as well (we'll see about that).
+* My "geeky goal" of the moment is to ensure my volume-control code is flexible and easy-to-use (the "reasonably usable" volume control stuff until recently has eluded me).
+* Refinements to the Wii-U interface (especially adding other inputs and volume control features if-possible).
+* I now have a "grand dream" to produce a "Professional" web-based interface geared towards the geek who wants fine-grained control of the VSX-1022-K from their desktop, laptop, tablet or phone.
+* More stuff I can't think of at the moment I'm updating this readme...  ;-)
 
 Software Disclaimer
 ===================
@@ -38,4 +41,5 @@ Currently, this is only tested with, and developed against the U.S. English (Ame
 Known Limitations
 =================
 
-I tried like heck to get the "xyzVL" direct-volume-control-set commands that I have seen described a number of different places online to work with my 1022-K and was unable to do so, so I will not be leveraging those for the time being.  I will use the ability to get the current volume, raise volume incrementally, and lower volume incrementally to achieve a similar effect for now.
+* For right now, all web interfaces I add to the project come with a standard disclaimer, along the lines of "you must have a PHP-capable web server to make this interface work.  If you don't know how to do this for yourself, I can't help you unless you pay me to do an install, unless you're in my good favor, and I see fit to help you of my own volition, so tough luck (unless I'm in your debt or like you)." ;-)
+* I now know how to grab the volume level of the system directly thanks to [code Mike Schaffer posted](http://xed.cc/kk), so, expect such things to be leveraged sufficiently at some point.

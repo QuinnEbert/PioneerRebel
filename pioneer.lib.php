@@ -49,6 +49,23 @@
 		}
 		return false;
 	}
+	// Send a command to the 1022-K amp unit requesting the input change to $input
+	// (which, for now, is the two numerals preceding "FN" in the Telnet command)
+	// 
+	// See pvRebel_getSource for the most-handy input number cross-reference
+	function pvRebel_setSource($address,$fnInput) {
+		pvRebel_SEND_CMD($address,$fnInput.'FN');
+	}
+	// Send a command to the 1022-K amp unit requesting the power turn on or off
+	// 
+	// Pass $fnPower=true for power-on (requires network over sleep enabled)
+	// Pass $fnPower=false for power-off
+	function pvRebel_setPower($address,$fnPower) {
+		$powerTo = 'F';
+		if ($fnPower)
+			$powerTo = 'O';
+		pvRebel_SEND_CMD($address,$fnInput.'P'.$powerTo);
+	}
 	// Request the current status of audio output muting on the 1022-K amp unit
 	// On success returns *1* for un-muted (IE: "VOL XYZ" shown on LCD) or *0* for
 	// "MUTING" -- success values are int types.  On failure, returns BOOLEAN type
