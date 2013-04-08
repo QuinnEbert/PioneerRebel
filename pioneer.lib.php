@@ -49,6 +49,14 @@
 		}
 		return false;
 	}
+	// Send a command to the 1022-K amp unit requesting the volume level decrement
+	function pvRebel_setVolDec($address) {
+		pvRebel_SEND_CMD($address,'VD');
+	}
+	// Send a command to the 1022-K amp unit requesting the volume level increment
+	function pvRebel_setVolInc($address) {
+		pvRebel_SEND_CMD($address,'VU');
+	}
 	// Send a command to the 1022-K amp unit requesting the input change to $input
 	// (which, for now, is the two numerals preceding "FN" in the Telnet command)
 	// 

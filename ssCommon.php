@@ -26,6 +26,18 @@ if (isset($_GET['pioneer'])) $pioneer = $_GET['pioneer'];
 $confirm = true;
 
 // Handling code for Ajax button requests:
+if (isset($_GET['volDn'])) {
+	require_once(dirname(__FILE__).'/pioneer.lib.php');
+	header('Content-Type: text/xml');
+	pvRebel_setVolDec($pioneer);
+	die("<pioneer_rebel>\n  <status>OK</status>\n</pioneer_rebel>\n");
+}
+if (isset($_GET['volUp'])) {
+	require_once(dirname(__FILE__).'/pioneer.lib.php');
+	header('Content-Type: text/xml');
+	pvRebel_setVolInc($pioneer);
+	die("<pioneer_rebel>\n  <status>OK</status>\n</pioneer_rebel>\n");
+}
 if (isset($_GET['input'])) {
 	require_once(dirname(__FILE__).'/pioneer.lib.php');
 	header('Content-Type: text/xml');
