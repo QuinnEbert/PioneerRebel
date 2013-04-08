@@ -14,7 +14,9 @@
   alert to successful command send dialog to appear, and enjoy!
 */
 // Network address where your VSX-1022-K can be reached:
-$pioneer = '192.168.1.Xyz';
+if ( ! isset($pioneer) ) $pioneer = '192.168.1.Xyz';
+// ^ Let $pioneer be overridden by external apps (like Zedom8or/"Z8"):
+if (isset($_GET['pioneer'])) $pioneer = $_GET['pioneer'];
 // Set this to indicate if you want an alert message to show up confirming
 // the command was sent to the VSX-1022-K unit:
 // 
