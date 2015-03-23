@@ -1,6 +1,12 @@
 This repo is outdated!
 ======================
 
+**Donations**
+
+There has been a lot more interest in PioneerRebel than I'd ever expected.  If you like what I'm doing, please consider donating:
+
+[Donate Now](http://quinnebert.net/z8donate/)
+
 *Posted 01 March, 2015*
 
 Pioneer Rebel has been (cleanly) merged into the Zedom8or repo:
